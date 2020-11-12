@@ -2,8 +2,16 @@ This demo shows different ways of debouncing async functions in React world
 * using React Effect debouncing
 * using request debouncing
 
-After `yarn start` you can go to the `http://localhost:3000/no-debouncing` and then switch the sections using navigation in the header.
-The routing is described in the `App.js`
+The demo has several sections for each step of the presentation
+* No debounce - problem definition, debounce-less behavior
+* Debounced Request - first attempt to resolve the problem, failed
+* Debounced Effect - successful attemp to resolve the problem using React Effect debouncing
+* Debounced Effect Abstraction - some abstractions over the successful implementations
+* Deferred Effect - Bonus 2 section, attempt to use useDeferredValue, failed
+* Debounced Request (Async) - Bonus 1 section, additional attempt to debounce request itself, successful
+
+You can switch the application sections using navigation in the header.
+The routing is defined in the `App.js`
 
 Files description:
 * `api.js` - async api mock. It gives reversed input and amount of request calls as output.
