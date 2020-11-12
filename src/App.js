@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  NavLink
+  NavLink,
+  Redirect,
 } from "react-router-dom"
 
 import Component from './Component'
@@ -29,6 +30,9 @@ export default () => (
         <NavLink activeClassName="active-link" to="/debounced-request-async" exact>Debounced Request (Async)</NavLink>
       </nav>
       <Switch>
+        <Route exact path="/">
+          <Redirect to="/no-debouncing" />
+        </Route>
         <Route path="/no-debouncing">
           <Component key="no-debouncing"  />
         </Route>
